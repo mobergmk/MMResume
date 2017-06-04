@@ -140,7 +140,7 @@ var project = {
         },
         {
             "title": "Project 2",
-            "hyperlink": "https://mobergmk.github.io/MMAbout"
+            "hyperlink": "https://mobergmk.github.io/MMAbout",
             "dates": "2016",
             "description": "My Project 2",
             "images": ["images/thehelpdocs.png"]
