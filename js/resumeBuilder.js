@@ -133,12 +133,14 @@ var project = {
     "projects": [
         {
             "title": "Project 1",
+            "hyperlink": "https://mobergmk.github.io/MMPortfolio/",
             "dates": "2016",
             "description": "My Project 1",
-            "images": ["images/mobergdev.png", "images/thehelpdocs.png"]
+            "images": ["images/MMPortfolio.png"]
         },
         {
             "title": "Project 2",
+            "hyperlink": "https://mobergmk.github.io/MMAbout",
             "dates": "2016",
             "description": "My Project 2",
             "images": ["images/thehelpdocs.png"]
@@ -148,9 +150,10 @@ var project = {
             for (i in project.projects){
                 $("#projects").append(HTMLprojectStart);
                 var formattedProjectTitle = HTMLprojectTitle.replace("%data%", project.projects[i].title);
+                var formattedProjectLink = formattedProjectTitle.replace("%link%", project.projects[i].hyperlink);
                 var formattedProjectDates = HTMLprojectDates.replace("%data%", project.projects[i].dates);
                 var formattedProjectDescription = HTMLprojectDescription.replace("%data%", project.projects[i].description);
-                $(".project-entry:last").append(formattedProjectTitle + formattedProjectDates + formattedProjectDescription);
+                $(".project-entry:last").append(formattedProjectLink + formattedProjectDates + formattedProjectDescription);
                 if (project.projects[i].images.length > 0) {
                     for (image in project.projects[i].images) {
                         var formattedProjectImage = HTMLprojectImage.replace("%data%", project.projects[i].images[image]);
